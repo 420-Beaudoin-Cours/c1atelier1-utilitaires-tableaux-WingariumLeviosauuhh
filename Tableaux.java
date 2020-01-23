@@ -39,4 +39,36 @@ public class Tableaux {
                 permute(tab, i, imin);
         }
     }
+    
+    public static void trierDecroissantSSS(int[] tab){
+    
+    }
+    
+    public static void print(int[] tab){
+    
+    }
+    
+    public static int maximum(int[] tab){
+        int max = 0;
+        
+        return max;
+    }
+    
+    public static int minimum(){
+        int min = 0;
+        
+        return min;
+    }
+    
+    public static double moyenne(){
+        double moyenne = 0;
+        
+        return moyenne;
+    }
+    
+    public static int fouilleSeq(int[] tab){
+        int index = 0;
+        
+        return index;
+    }
 }
