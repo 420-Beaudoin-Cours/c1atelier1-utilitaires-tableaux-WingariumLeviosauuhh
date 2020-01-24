@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 /**
  * @author France Beaudoin
  */
@@ -41,7 +43,21 @@ public class Tableaux {
     }
     
     public static void trierDecroissantSSS(int[] tab){
-    
+        int imax;
+        
+        for(int i = 0; i < tab.length - 1; i++){
+            imax = i;
+            
+            for(int j = i + 1; j < tab.length; j++){
+                if(tab[j] > tab[imax]){
+                    imax = j;
+                }
+            }
+            
+            if(imax != i){
+                permute(tab, i, imax);
+            }
+        }
     }
     
     public static void print(int[] tab){
@@ -51,7 +67,7 @@ public class Tableaux {
     }
     
     public static int maximum(int[] tab){
-        int max = 0;
+        int max = Integer.MIN_VALUE;
         
         for(int i : tab){
             if(i > max){

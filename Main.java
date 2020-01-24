@@ -7,7 +7,9 @@ public class Main{
 			table[i] = (int)Math.round(Math.random() * 10);
 		}
 		
-		System.out.println(Tableaux.fouilleSeq(table, 5));;
+		System.out.println("Index (5): " + Tableaux.fouilleSeq(table, 5));
+		Tableaux.trierDecroissantSSS(table);
+		Tableaux.print(table);
 	}
 	
 }
