@@ -45,30 +45,54 @@ public class Tableaux {
     }
     
     public static void print(int[] tab){
-    
+        for(int i : tab){
+            System.out.println(i);
+        }
     }
     
     public static int maximum(int[] tab){
         int max = 0;
         
+        for(int i : tab){
+            if(i > max){
+                max = i;
+            }
+        }
+        
         return max;
     }
     
-    public static int minimum(){
-        int min = 0;
+    public static int minimum(int[] tab){
+        int min = Integer.MAX_VALUE;
+        
+        for(int i : tab){
+            if(i < min){
+                min = i;
+            }
+        }
         
         return min;
     }
     
-    public static double moyenne(){
-        double moyenne = 0;
+    public static double moyenne(int[] tab){
+        double somme = 0;
         
-        return moyenne;
+        for(int i : tab){
+            somme += i;
+        }
+        
+        return somme/tab.length;
     }
     
-    public static int fouilleSeq(int[] tab){
-        int index = 0;
+    public static int fouilleSeq(int[] tab, int val){
+        int i = 0;
+        boolean isFound = false;
         
-        return index;
+        while(!isFound && i < tab.length){
+            isFound = (tab[i] == val);
+            i++;
+        }
+        
+        return (isFound) ? i : -1;
     }
 }
